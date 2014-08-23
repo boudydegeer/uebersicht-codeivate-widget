@@ -24,14 +24,14 @@ update: (output, domEl) ->
 
   @setLevel( data )
 
-  if @isProgramming(data) then
-  @setColor ".level", @color["green"]
-  @showsSummaryMessage( "Is programing right now" ) and
-  @setCurrentLanguage( data )
+  if @isProgramming(data)
+    @setColor ".level", @color["green"]
+    @showsSummaryMessage( "Is programing right now" ) and
+    @setCurrentLanguage( data )
 
-  if @isOnStreak(data) then
-  @setColor ".level", @color["yellow"]
-  @appendSummaryMessage("and is on a Streak")
+  if @isOnStreak(data)
+    @setColor ".level", @color["yellow"]
+    @appendSummaryMessage("and is on a Streak")
 
   @renderLanguages( data.languages )
 
@@ -52,8 +52,8 @@ renderLanguage: ( language, details ) ->
   output
 
 style: """
-  top: 20px
-  left: 70%
+  top: 250px
+  left: 20px
   color: #fff
   font-family: Helvetica Neue
   text-align: center
